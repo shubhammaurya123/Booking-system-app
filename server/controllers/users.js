@@ -13,7 +13,7 @@ export const updateUsers = async (req, res, next) => {
   }
 };
 
-export const DeleteUsers = async(req, res, next) => {
+export const DeleteUsers = async (req, res, next) => {
   try {
     await User.findByIdAndDelete(req.params.id);
     res.status(200).send("Your User is deleted");
